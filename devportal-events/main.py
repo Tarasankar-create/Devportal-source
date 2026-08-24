@@ -11,8 +11,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
-
 @app.post("/webhooks/jenkins")
 async def jenkisn_webhook(event: JenkinsEvent):
     doc=event.model_dump()
